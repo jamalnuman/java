@@ -134,7 +134,7 @@
     // System.out.println(Integer.parseInt(money));
     // System.out.println(Integer.valueOf(money)); so you can call methods on this cause valueOf will return an object. 
 
-    //working with strings...you have to use double quotes..and it there is not a primitive way of assigning a value to the string class..like there is with numbers (int and Integer)...only String with string data types.
+    //working with strings...you have to use double quotes..and there is not a primitive way of assigning a value to the string class..like there is with numbers (int and Integer)...only String with string data types.
 
     // String x = "hello";
     // System.out.println(x.charAt(0));
@@ -261,7 +261,7 @@
 
 
     //Ternary Operator
-    //important to make sure result matches the type of data type..as seen in line 266 and 267
+    //important to make sure the return value from the ternary operator matches the type of data for the variable..as seen in line 266 and 267
     // String name = "clare";
     // String x = name.equals("clare") ? "clare" + "h" : "clare"; 
     // boolean x = name.equals("clare") ? true : false;
@@ -278,9 +278,8 @@
     // }
 
 
-
-    // System.out.println("guess the password");
     // String password = "let me in";
+    // System.out.println("guess the password");
     // Scanner scanner = new Scanner(System.in);
     // String guess = scanner.nextLine();
 
@@ -294,10 +293,10 @@
 
 
 
-    //the above code had wet code...this is do/while loop helped to get around the wet code. 
+    //the above is wet code...this do/while loop helped to get around the wet code. 
     // String password = "jamal";
     // Scanner scanner = new Scanner(System.in);
-    // String guess; //this needs to be defined outside the loop, so it can be accessed in the while portion of the loop on line 307..if it was not defined here, then it would not be available for line 307.
+    // String guess; //this needs to be defined outside the loop, so it can be accessed in the while portion of the loop on line 304..if it was not defined here, then it would not be available for line 307.
 
     // do {
 
@@ -321,3 +320,112 @@
 
 //****************** 3 to 4 ***************************
 
+
+//import java.util.Arrays;
+//import java.util.Scanner;
+//import java.util.ArrayList;
+
+//nested if statement
+//scope
+//break keyword..takes you out of the method/function/loop
+//continue keyword takes you to the next iteration of the loop
+
+ //public class MySweetProgram{
+
+   //public static void main(String[] args) {
+    // int i = 9;
+    // while (i >= 0) {
+    //   int j = i;
+    //   while(j >= 0){
+    //     System.out.println(j + " ");
+    //     j--;
+    //   }
+    //   System.out.println();
+    //   i--;
+    // }
+    // for(int i = 9; i >= 0; i--) {
+    //   for(int j = i; j >= 0; j--) {
+    //     System.out.println(j + " ");
+    //   }
+    //     System.out.println(); //prints a blank line
+    // }
+
+    //integer array..name is grades
+    // int[] empty = new int[10];
+    // int[] grades = new int[10];
+    // int[] othergrades = {1,2,3,99,-1,5,6,7,8,9,10};
+    // int[][] studentsgrades = {{1,2,3},{4,5,6,7}};
+    //grades[0] = 18;
+    // new int[10];
+
+    //this gives a weird response
+    //System.out.println(othergrades);
+
+   //this is how you print the values of an array...have to import, as well.  
+    //System.out.println(Arrays.toString(othergrades));
+
+    //to print the values of a nested array
+    //System.out.println(Arrays.deepToString(studentsgrades));
+
+    //System.out.println("enter a number");
+    //Scanner userinput = new Scanner(System.in);
+
+    // for (int i=0; i<10; i++ ) {
+    //   int x = userinput.nextInt();
+    //   //grades[i] = 5;
+    //   empty[i] = x;
+    // }
+    // System.out.println(Arrays.toString(empty));
+
+    //this is when you want to print out the error 
+    // try{
+    //   System.out.println(othergrades[11]);  
+    // } catch(Exception e) {
+    //   System.out.println(e);
+    // }
+
+    //to dynamically size the array
+    // System.out.println("What size should the array be?");
+    // Scanner input = new Scanner(System.in);
+    // int size = input.nextInt();
+    // int[] custom = new int[size];
+    // System.out.println(Arrays.toString(custom));
+    
+    //Arrays.sort(othergrades); //alters the original array
+    //System.out.println(Arrays.toString(othergrades));
+    
+    //comparing arrays
+    // int[] grades2 = {1,2,3,99,-1,5,6,7,8,9,10};
+    // boolean response = Arrays.equals(othergrades, grades2);
+    // System.out.println(response);
+
+    //filling an array
+    // String[] practice = new String[3];
+    // Arrays.fill(practice, "test");
+    // System.out.println(Arrays.toString(practice));
+
+    //2d Array
+    // int[][] grades = new int[3][4]; //the 3 is the row and 4 is the column
+    // System.out.println(Arrays.deepToString(grades));
+    // grades[1][1] = 5;
+    // System.out.println(Arrays.deepToString(grades));
+
+//     int[][] grades = {
+//       {1,2,3},
+//       {4,5,6,7,8,9},
+//       {11,22,33}
+//     };
+
+//     System.out.println(grades.length);
+//     System.out.println(grades[1].length);
+
+//     //looping through 2d arrays
+//     for (int row = 0; row < grades.length; row++) {
+//       for (int col=0; col<grades[row].length; col++ ) {
+//         System.out.println(grades[row][col]); 
+//       } 
+//     }
+//   }
+// }
+
+//*********************4 to 5********************

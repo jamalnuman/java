@@ -4,7 +4,7 @@ public class User {
   public String firstName; 
   public String lastName;
 
-  //Again, the public keyword and also states that we are returning a String not an Integer or somthing else
+  //Again, the public keyword, and it also states that we are returning a String not an Integer or somthing else
   public String getFullName() {
     return firstName + " " + lastName;
   }
