@@ -358,7 +358,7 @@
     //grades[0] = 18;
     // new int[10];
 
-    //this gives a weird response
+    //this gives the memory address of the array
     //System.out.println(othergrades);
 
    //this is how you print the values of an array...have to import, as well.  
@@ -428,4 +428,75 @@
 //   }
 // }
 
-//*********************4 to 5********************
+//*********************4 to 5****************************************************
+//ArraysList will resize as the input increases
+//ArrayList<Integer>grades = new ArrayList<Integer>();
+//<within here can be any type of data structure, such as Integer, String, Float etc.
+//grades.add(5) to add a value
+//grades.get(0) to get the 0th value 
+//grades.set(0, 10) to update an index with a value
+//grades.size() will return the length of the arraylist
+
+// import java.util.ArrayList;
+// import java.util.List;
+// import java.util.Arrays;
+
+// public class MySweetProgram {
+
+//   public static void main(String[] args) {
+    //Stating grades will be a list and what type of list is defined after the new keyword...in this example an ArrayList..it could also be, for example, LinkedList
+    // List<Integer> grades = new ArrayList<Integer>();
+    // grades.add(5);
+    // grades.add(7);
+    // //System.out.println(grades.get(0));
+    // //replace the value at an index
+    // grades.add(0,99);
+    // System.out.println(grades.isEmpty());
+    // System.out.println(grades.contains(99));
+    // System.out.println(grades.indexOf(9));
+    // System.out.println(grades.get(0));
+    // //grades.remove(0);
+    // System.out.println(grades.get(0));
+    // grades.clear();
+    // //printing an ArrayList
+    // System.out.println(grades);
+    //Making an Array and then converting to an ArrayList
+    // List<Integer> grades = Arrays.asList(4,5,3,2,2);
+    // System.out.println(grades);
+    // List<String> string = Arrays.asList("h");
+    // System.out.println(string);
+    //iterate through the arraylist 
+    // for(int i = 0; i < grades.size(); i++) {
+    //   grades.set(i, grades.get(i) * 2);
+    //   System.out.println(grades.get(i));
+    // }  
+    //foreach loop..for each grade in grades
+    // for(int grade : grades) {
+    //   System.out.println(grade);
+    // } 
+
+    //List of List of Integers
+    // List<List<Integer>> allGrades = new ArrayList<List<Integer>>();
+    // allGrades.add(Arrays.asList(1,2,3,4,5));
+    // allGrades.add(Arrays.asList(11,12,13,14,15));
+    // allGrades.add(Arrays.asList(21,22,23,24,25));
+
+    // for(List<Integer> grades : allGrades) {
+    //   for(int grade : grades) {
+    //     System.out.print(grade + "*");
+    //   }
+    //   System.out.println();
+    // }
+    //converting ArrayList to an Array
+//     List<Integer> allGrades = Arrays.asList(1,2,3,9,4,5);
+//     int[] grades = new int[allGrades.size()];
+
+//     for(int i = 0; i < allGrades.size(); i++) {
+//       grades[i] = allGrades.get(i);
+//     }
+//     System.out.println(allGrades);
+//     System.out.println(Arrays.toString(grades));
+//   }
+// }
+
+//if a class has the keyword "void", it can not return a value, but you can still use the return keyword...in that case, the return keyword will only exit you out of the function. 
