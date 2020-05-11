@@ -40,10 +40,10 @@ public class User {
     System.out.println(x.getFullName());
   }
 
-  // STATIC METHOD, so it is called on a class, and it is TAKING A LIST as an argument.. NOT AN CLASS
+  // STATIC METHOD, so it is called on a class, and it is TAKING A LIST as an argument.. NOT A CLASS
   public static void printName(List<User> xxx) {
-    for (User u : xxx) { //for every user in the list
-      System.out.println(u.getFullName());
+    for (User x : xxx) { //for every user in the list
+      System.out.println(x.getFullName());
     }
   }
 
@@ -52,6 +52,16 @@ public class User {
   public static int searchList(List<User> xx, User xxx) {
     return searchList(xx, xxx.getFullName());
   } 
+
+  //searching through a List and return the user object if found in the List 
+  public static User findUser(List<User> xxx, User x) {
+    for(User auser : xxx) { //looping thru xxx
+      if(auser.equals(x)) {//x being the passed in User
+        return auser;
+      }
+    }
+    return null;
+  }
 
   //getter method..that is returning a String value..you would also need to the change the public keyword on line 5 to private for firstName variable. 
   public String getFirstName() {

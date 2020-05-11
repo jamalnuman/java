@@ -503,12 +503,12 @@
 
 //***************************************** 5 to 6 *************************************************
 
-import java.util.ArrayList;
-import java.util.List;
+// import java.util.ArrayList;
+// import java.util.List;
 
-public class MySweetProgram {
+// public class MySweetProgram {
 
-  public static void main(String[] args) {
+//   public static void main(String[] args) {
   
   //encapsulation: hide the inner details of something, so it is not exposed to everthing..like a variable that is instantiated at the 'class' level and can be used anywhere in the class (see the firstname and lastname variable in the User class. you have access to this variable with 'getters' and 'setters'
 
@@ -527,7 +527,7 @@ public class MySweetProgram {
   // me.setFirstName("jamal");
   // me.setLastName("numan");
 
-  // //create a List with a custom type <User>
+  // //create a List with a custom type of <User>
   // List<User> customList = new ArrayList<User>();
   // customList.add(me);
 
@@ -547,26 +547,26 @@ public class MySweetProgram {
     //   us.add(us2);
     // }
 
-  //   for (User us2 : us) {
-  //     System.out.println(us2.getFullName());
+  //   for (User xx : us) {
+  //     System.out.println(xx.getFullName());
   //   }
   // }
 
     //static methods are called on the class, like User.findList() and instance methods are on called on the instance, meaning the objects of the class, like User u = new User() and then u.talk().
 
-    User x = new User();
-    x.setFirstName("jamal");
-    x.setLastName("numan");
+    // User x = new User();
+    // x.setFirstName("jamal");
+    // x.setLastName("numan");
     //User.printFullName(x);
 
-    //User y = new User();
+    // User y = new User();
     // y.setFirstName("yasmeen");
     // y.setLastName("ahmed");
 
 
-    List<User> users = new ArrayList<User>();
-    users.add(x);
-    users.add(y);
+    // List<User> users = new ArrayList<User>();
+    // users.add(x);
+    //users.add(y);
 
     //this method is called on the class and takes a list as an argument. see the printName() method in User.java
     //User.printName(users);
@@ -579,25 +579,39 @@ public class MySweetProgram {
     //the method gets called on the user class, that is why the 'static' keyword is used and the method takes a List with a full name. 
     //System.out.println(User.searchList(users, "yasmeen ahmed"));
 
+    //if the User or another parent class has a method defined and the inheritance class wants to override that method, it is done as: 
+
+    //@Override //this is needed
+    //public void sayHello() { //the method name has to be the same as the method in the parent's class
+      //enter the code here
+    //}
+
     //method overwriting..this is when you change an inherited method in an object (instance). this print statment is using the toString() method overwrite ..these are the same print statement. the .toString() is implied implicitly. 
       //System.out.println(x);
       //System.out.println(x.toString()); 
 
 
       // Searching a list for custom objects. the searchList from line 51
-      System.out.println(User.searchList(users, y));
+      //System.out.println(User.searchList(users, y));
 
+      //x is in the List - Users
+      //System.out.println(User.findUser(users, x));
+      //y, for this example, is not in the List-Users
+      //System.out.println(User.findUser(users, x));
 
-
-
-
-}
+  //}
 
 //how to pass custom type as an argument. I DONT UNDERSTAND THIS 
     // public void printUser (User us2) {
     //   System.out.println(us2.getFullName());
-    // }
+    // }  
+  
+//}
 
-  
-  
-}
+//to extend a class to another class
+// public class Student extends User{
+  //now the Student class will have the same methods that the User class has
+//}
+
+//****************** last hour ************************
+
