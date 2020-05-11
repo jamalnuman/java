@@ -500,3 +500,104 @@
 // }
 
 //if a class has the keyword "void", it can not return a value, but you can still use the return keyword...in that case, the return keyword will only exit you out of the function. 
+
+//***************************************** 5 to 6 *************************************************
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class MySweetProgram {
+
+  public static void main(String[] args) {
+  
+  //encapsulation: hide the inner details of something, so it is not exposed to everthing..like a variable that is instantiated at the 'class' level and can be used anywhere in the class (see the firstname and lastname variable in the User class. you have access to this variable with 'getters' and 'setters'
+
+  // User user = new User();
+  // System.out.println(user.getFirstName());
+  // user.setFirstName("jamal");
+  // System.out.println(user.getFirstName());
+  // System.out.println(user.getLastName());
+  // user.setLastName("numan");
+  // System.out.println(user.getLastName());
+  // System.out.println(user.getFullName());
+
+  //to create an Array List of a custom type
+  //created an object from the User class
+  // User me = new User();
+  // me.setFirstName("jamal");
+  // me.setLastName("numan");
+
+  // //create a List with a custom type <User>
+  // List<User> customList = new ArrayList<User>();
+  // customList.add(me);
+
+  // //then print the values
+  // System.out.println(customList.get(0).getFullName());
+
+    //dynamically created a User class and set the properties within it
+    // String[] firstNames = { "jamal", "yasmeen"};
+    // String[] lastNames = {"numan", "ahmed"};
+
+    // List<User> us = new ArrayList<User>();
+
+    // for(int i = 0; i < firstNames.length; i++) {
+    //   User us2 = new User();
+    //   us2.setFirstName(firstNames[i]);
+    //   us2.setLastName(lastNames[i]);
+    //   us.add(us2);
+    // }
+
+  //   for (User us2 : us) {
+  //     System.out.println(us2.getFullName());
+  //   }
+  // }
+
+    //static methods are called on the class, like User.findList() and instance methods are on called on the instance, meaning the objects of the class, like User u = new User() and then u.talk().
+
+    User x = new User();
+    x.setFirstName("jamal");
+    x.setLastName("numan");
+    //User.printFullName(x);
+
+    //User y = new User();
+    // y.setFirstName("yasmeen");
+    // y.setLastName("ahmed");
+
+
+    List<User> users = new ArrayList<User>();
+    users.add(x);
+    users.add(y);
+
+    //this method is called on the class and takes a list as an argument. see the printName() method in User.java
+    //User.printName(users);
+
+    //method overloading
+    // System.out.println(x.output());
+    // System.out.println(x.output(true));
+    // System.out.println(x.output(false));
+
+    //the method gets called on the user class, that is why the 'static' keyword is used and the method takes a List with a full name. 
+    //System.out.println(User.searchList(users, "yasmeen ahmed"));
+
+    //method overwriting..this is when you change an inherited method in an object (instance). this print statment is using the toString() method overwrite ..these are the same print statement. the .toString() is implied implicitly. 
+      //System.out.println(x);
+      //System.out.println(x.toString()); 
+
+
+      // Searching a list for custom objects. the searchList from line 51
+      System.out.println(User.searchList(users, y));
+
+
+
+
+
+}
+
+//how to pass custom type as an argument. I DONT UNDERSTAND THIS 
+    // public void printUser (User us2) {
+    //   System.out.println(us2.getFullName());
+    // }
+
+  
+  
+}
