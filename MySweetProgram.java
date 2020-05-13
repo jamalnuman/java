@@ -615,3 +615,148 @@
 
 //****************** last hour ************************
 
+
+//if you dont want the ability to create child classes from a parent class, use the keyword 'abstract'..for ex:
+//public abstract class User {}..so you cant do the following: User x = new User();
+
+//you can also have abstract methods. these types of methods are not allowed to have a body. and if a child class inherits abstract methods from the parent class, then child class MUST create their own case of the abstract method (with the @Override) or else an error will occur. the following is the syntax for an abstract method: public abstract void sayHello(); 
+
+//Polymorphism...this is when the parent class has an abstract method and this abstract method in the child classes print different values. 
+// public abstract class User {
+//   public abstract void sayHello();
+// }
+
+// public class Student extends User {
+//   @Override
+//   public void sayHello() {
+//     System.out.println("I am a student");
+//   }
+// }
+
+// public class Teacher extends User {
+//   @Override
+//   public void sayHello() {
+//     System.out.println("I am a teacher.");
+//   }
+// }
+
+//Constructor: doesnt have return types like String or Int etc and is envoked with the new keyword. the name of the constructor has to be the same as the class. this is like the initialize method in Ruby or the constructor method in JS. 
+//in the specific class the constructor syntax:
+//public User(String firstName, String lastName){
+  //firstName = firstName;
+  //lastName = lastName;
+//}
+//now when the this class is envoked, it will expect two arguments. Student x = new Student("jamal", "numan")
+
+//from the child, if you want to invoke a method from the parent class..use the super keyword...super.sayHello();
+
+//Interfaces define behavior (how you work with something) ..this is similar to modules, which hold lots of methods(behavior) and classes can include modules in them to get the functionality of the modules.
+
+//to create an interface: 
+//public interface Talk {
+  //void sayHello();
+//} the method will not include a body, the body will be coded once the interface is implemented into a class. 
+
+//to include an interface in a class: 
+//public class Strudent extends User implements Talk
+//now the class will be forced to include a method sayHello() in it with a body. 
+
+//to make sure a method is not overwritten by a child class, use the final keyword. 
+//public final void sayHello();
+
+//to make sure that a class can not have any child classes, use the final keyword:
+//public final class Teacher
+//now this class can not be extended or have any child classes. 
+
+//remember when you open a scanner or something else, then close the scanner...if the scanner is named "in"...then in.close();
+
+
+
+// package youTube;
+
+// import java.util.Scanner;
+
+// public class forTesting {
+
+//   public static void main(String[] args) {
+//  System.out.println("Enter your name!");
+//  Scanner name = new Scanner(System.in);
+//  String yourName = name.nextLine();
+//  if(yourName.equalsIgnoreCase("jamal")) {
+//    System.out.println("Your name is Jamal");
+//  } else {
+//    System.out.println("Your name is " + yourName);
+//  }
+//    name.close();
+    
+//  int number = 0;
+//  while (number < 10) {
+//    System.out.println(number);
+//    number ++;
+//  }
+    
+  //this will print an least one time, cause of the syntax. 
+//  int number = 10;
+//  do {
+//    System.out.println(number);
+//    number++;
+//  } while (number < 0);
+  
+  //}
+
+
+//}
+
+
+
+
+//make the size of the array, with input from the user
+// System.out.println("Enter a number.");
+//   Scanner info = new Scanner(System.in);
+//   int size = info.nextInt();
+  
+  
+//   //integer array named grades
+//   int[] grades = new int[size];
+  
+//   for(int i = 0; i < size; i++) {
+//     grades[i] = info.nextInt();
+//     System.out.println(grades[i]);
+//   }
+  
+//   System.out.println(Arrays.toString(grades));
+//   info.close();
+
+
+
+//to read from a file..remember to import the proper imports
+// public class forTesting {
+
+//   public static void main(String[] args) throws FileNotFoundException { 
+//   File file = new File("test.txt");
+//   Scanner print = new Scanner(file);
+//   while (print.hasNextLine()) { 
+//     System.out.println(print.nextLine()); 
+//   }
+//   print.close();
+//   } 
+// } 
+
+
+
+//read from a file and then enter the values into a List and then print the values of the List
+// public static void main(String[] args) throws FileNotFoundException { 
+//   File file = new File("test.txt");
+//   Scanner print = new Scanner(file);
+//   List<String> names =  new ArrayList<String>();
+//   while (print.hasNextLine()) { 
+//     names.add(print.nextLine()); 
+//   }
+  
+//   for(int i = 0; i < names.size(); i++) {
+//     System.out.println(names.get(i));
+//   }
+//   print.close();
+//   } 
+
+
