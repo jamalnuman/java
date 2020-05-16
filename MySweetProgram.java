@@ -759,4 +759,72 @@
 //   print.close();
 //   } 
 
+//it is important that you keep the interface general so it can take the value assigned to it...for example: 
+//List<String> example = new ArrayList<String>(); this works cause an ArrayList will accept a List, but the following will not work: ArrayList<String> example = new LinkedList<String>(); cause both of these values are specific and the interface is not general like List is. 
+
+
+
+
+// public static void main(String[] args) throws FileNotFoundException { 
+//   LinkedList<String> names = new LinkedList<String>();
+//   names.add("jamal");
+//   names.add("yasmeen");
+//   names.add("john");
+//   names.add(0, "Jamal");
+//   for(String name : names) {
+//     System.out.println(name);
+//   }
+// } REMEMBER TO ADD THE IMPORTS
+//System.out.println(names.remove()); this is like a queque..removes the first item put in..FIFO ..also takes an argument as: names.remove(2);
+
+
+
+//working with Iterator()
+// public static void main(String[] args) throws FileNotFoundException { 
+//   LinkedList<String> names = new LinkedList<String>();
+//   names.add("jamal");
+//   names.add("yasmeen");
+//   names.add("john");
+//   //names.add(0, "Jamal");
+//   //System.out.println(names.remove(2));
+//   //System.out.println(names.remove());
+// //  for(String name : names) {
+// //    System.out.println(name);
+// //    
+// //  }
+//   //iterator type will be a String cause the data type for items is a String.
+//   Iterator<String> items = names.iterator();
+//   System.out.println(items.next());
+//   System.out.println(items.next());
+//   System.out.println(items.hasNext());
+//   if(items.hasNext()) {
+//     System.out.println(items.next()); 
+//   }
+//   while(items.hasNext()) {
+//     System.out.println(items.next());
+//   }
+//   for(String s : names) {
+//     System.out.println(s);
+//   }
+//   } 
+
+
+
+//iterating through 2d array
+// public static void main(String[] args) { 
+  
+//     int[][] data = {
+//         {1, 2, 3, 4, 5},
+//         {11, 22, 33, 44, 55},
+//         {33, 44, 55, 66, 77}
+//     };
+//     //System.out.println(data[1][2]);
+//     for(int i = 0; i < data.length; i++) {
+//       for (int j = 0; j < data[i].length; j++) {
+//         System.out.print(data[i][j] + " ");
+//       }
+//       System.out.println();
+//     }
+//   } 
+
 
