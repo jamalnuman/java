@@ -3,9 +3,29 @@ import java.util.List;
 public class User {
 
   //in order for us to call these methods in another class, these need to have the 'public' keyword. 
+  
   //remember the value for these variables / fields will be assigned when an object from this class is instantiated. 
   private String firstName; 
   private String lastName;
+
+  //getter method..that is returning a String value..you would also need to the change the public keyword on line 8 to private for firstName variable. 
+  public String getFirstName() {
+    return firstName;
+    //return firstName.toUpperCase();
+  }
+
+  public String getLastName() {
+    return lastName;
+  }
+
+  //setter method that is not returning a value, so the void keyword is used AND THEREFORE THE RETURN KEYWORD CAN NOT BE USED. parameter passed in, is a String and can be given any name.
+  public void setFirstName(String fn) {
+    firstName = fn;
+  }
+
+  public void setLastName(String ln) {
+    lastName = ln;
+  }
 
   //Again, the public keyword, and it also states that we are returning a String not an Integer or something else
   public String getFullName() {
@@ -18,6 +38,7 @@ public class User {
   public String output() {
     return "Hi my name is " + getFullName(); 
   }
+
   public String output(boolean nice) {
     if (nice) {
       return "you are a beautiful person.";
@@ -25,7 +46,7 @@ public class User {
       return "you a bad person.";
     }
   }
-  //this will return an integer, that is why int is on line 29. 
+  //this will return an integer, that is why int is on line 31. 
   public static int searchList(List<User> xxx, String fullName) {
     for(int i = 0; i < xxx.size(); i++) {
       if (xxx.get(i).getFullName().equals(fullName)) 
@@ -55,32 +76,15 @@ public class User {
 
   //searching through a List and return the user object if found in the List 
   public static User findUser(List<User> xxx, User x) {
-    for(User auser : xxx) { //looping thru xxx
-      if(auser.equals(x)) {//x being the passed in User
-        return auser;
+    for(User anyuser : xxx) { //looping thru xxx
+      if(anyuser.equals(x)) {//x being the passed in User
+        return anyuser;
       }
     }
     return null;
   }
 
-  //getter method..that is returning a String value..you would also need to the change the public keyword on line 5 to private for firstName variable. 
-  public String getFirstName() {
-    return firstName;
-    //return firstName.toUpperCase();
-
-  }
-  //setter method that is not returning a value, so the void keyword is used AND THEREFORE THE RETURN KEYWORD CAN NOT BE USED. parameter passed in..is a String and can be given any name.
-  public void setFirstName(String fn) {
-    firstName = fn;
-  }
-
-  public String getLastName() {
-    return lastName;
-  }
-
-  public void setLastName(String ln) {
-    lastName = ln;
-  }
+  
 
   //method overwriting
   @Override
